@@ -24,11 +24,11 @@ public class ScannerWhileEx5 {
                 int quantity = input.nextInt();
 
                 totalCost += price*quantity;
-                System.out.println("상품명:"+ product + "가격:" + price + "수량"+quantity+ "합계"+ price*quantity);
+                System.out.println("상품명:"+ product + "가격:" + price + "수량"+quantity+ "합계" +price*quantity);
 
 
             }else if(option == 2){
-                System.out.println("총비용"+ totalCost);
+                System.out.println("총가격"+totalCost);
                 totalCost = 0;
             }else if(option == 3){
                 System.out.println("프로그램을 종료합니다");
