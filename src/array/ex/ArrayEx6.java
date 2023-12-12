@@ -10,19 +10,17 @@ public class ArrayEx6 {
         그램을 작성하자. 실행 결과 예시를 참고하자.*/
 
         Scanner scanner = new Scanner(System.in);
-        System.out.print("입력받을 숫자의 개수를 입력하세요.");
-        int n = scanner.nextInt();
+        System.out.println("입력받을 숫자의 개수를 입력하세요:");
+        int count = scanner.nextInt();
+        int [] numbers = new int[count];
+        int minNumber ,maxNumber;
 
-        int[] numbers = new int[n];
-        int minNumber , maxNumber;
-
-        System.out.println(n+"개의 정수를 입력하세요");
-        for (int i = 0; i < n; i++) {
-            numbers[i] =scanner.nextInt();
+        System.out.println(count+"개의 정수를 입력하세요");
+        for (int i = 0; i < count; i++) {
+            numbers[i] = scanner.nextInt();
         }
-
-        minNumber = maxNumber = numbers[0];
-        for (int i = 1; i < n; i++) {
+        minNumber = maxNumber= numbers[0];
+        for (int i = 1; i < count; i++) {
             if (numbers[i] < minNumber) {
                 minNumber = numbers[i];
             }
@@ -30,7 +28,5 @@ public class ArrayEx6 {
                 maxNumber = numbers[i];
             }
         }
-        System.out.println("가장 적은 정수"+ minNumber);
-        System.out.println("가장 큰 정수"+ maxNumber);
     }
 }
