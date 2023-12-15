@@ -22,6 +22,7 @@ public class MethodEx4 {
                 balance = withdraw(amount, balance);
             } else if (menu == 3) {
                 System.out.println("현재 잔액" + balance + "원");
+                break;
             } else if (menu == 4 ) {
                 System.out.println("시스탬을 종료합니다.");
                 break;
