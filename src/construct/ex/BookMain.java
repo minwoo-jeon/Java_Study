@@ -5,12 +5,11 @@ public class BookMain {
         Book book1 = new Book();
         book1.displayInfo();
 
-        Book book2 = new Book("Hello Java" , "Seo");
+        Book book2 = new Book("Hello Java", "Seo");
         book2.displayInfo();
 
-        Book book3 = new Book("Hellow Java", "kim", 70);
+        Book book3 = new Book("자바의 정석", "남궁민", 250);
         book3.displayInfo();
-
 
     }
 }
