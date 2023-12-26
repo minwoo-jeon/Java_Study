@@ -2,40 +2,39 @@ package access.ex;
 
 public class ShoppingCart {
     private Item[] items = new Item[10];
-    private  int itemCount;
+    private int itemsCount;
 
-    ShoppingCart() {
+    public ShoppingCart() {
 
     }
 
     public void addItem(Item item) {
-        //검증로직
-        if (itemCount >= items.length) {
-            System.out.println("장바구니가 가득 찻습니다");
+        if (itemsCount >= items.length) {
+            System.out.println("장바구니에는 상품을 최대 10개만 담을 수 있습니다");
             return;
         }
-        //정상로직
-         items[itemCount] = item;   // = >   xoo2참조값을   xaxoo1[0]배열에 값을 넣는다.
-        itemCount++;
+         items[itemsCount] = item;
+         itemsCount++;
+
     }
 
     public void displayItems() {
         System.out.println("장바구니 상품 출력");
-        for (int i = 0; i < itemCount; i++) {
-            Item item =  items[i];
-            System.out.println("상품명:"+item.getName()+ ", 합계" + item.getTotalPrice());
+        for (int i = 0; i < itemsCount; i++) {
+            Item item = items[i];
+            System.out.println("상품명:"+ item.getName() + ",합계" + item.totalPrice());
         }
-        System.out.println("전체 가격합" + calculateTotalPrice());
+        System.out.println("전체 가격 합 :" + totalPrice() );
     }
 
-    private int calculateTotalPrice() {
-        int totalPrice = 0;
-        for (int i = 0; i < itemCount; i++) {
+    public int totalPrice() {
+        int total = 0;
+        for (int i = 0; i < itemsCount; i++) {
             Item item = items[i];
-            totalPrice += item.getTotalPrice();
-        }
-        return totalPrice;
+            total += item.totalPrice();
+        }return total;
     }
+
 }
 
 
